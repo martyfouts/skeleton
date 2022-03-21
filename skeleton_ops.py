@@ -117,7 +117,11 @@ class SKELETON_OT_Message(Operator):
     @classmethod
     # https://docs.blender.org/api/current/bpy.types.Operator.html#bpy.types.Operator.poll
     def poll(cls, context):
-        return context.mode == "OBJECT"
+        if context.mode == "OBJECT":
+            return True
+        else:
+            cls.poll_message_set("Only works in OBJECT mode")
+            return False
 
     # https://docs.blender.org/api/current/bpy.types.Operator.html#bpy.types.Operator.execute
     def execute(self, context):
