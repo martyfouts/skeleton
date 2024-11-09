@@ -1,3 +1,6 @@
+# Deprecated
+This repository is now deprecated. The examples apply to Blender versions 3.x. It has not been tested on newer versions of Blender.
+
 This Blender Add-on is a skeleton add-on that I use as a starting point
 for creating new small scale add-ons.
 
